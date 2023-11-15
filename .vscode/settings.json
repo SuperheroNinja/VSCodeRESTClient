@@ -2,6 +2,7 @@
       "rest-client.environmentVariables": {
         "$shared": {
             // $shared means that the variables are always available
+            // reference: https://github.com/Huachao/vscode-restclient#environment-variables
             "version": "v1",
             "envFunctionalValue": "foo",
             "envToken": "bar"
