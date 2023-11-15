@@ -4,6 +4,7 @@ This repo is used to demo REST Client in VS Code.
 
 ## Contents
 This repo contains the following files:
+
 `.vscode/settings.json` Contains environment settings
 
 `httpbin.http` Main file for using REST Client
