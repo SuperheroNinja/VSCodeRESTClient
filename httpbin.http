@@ -1,0 +1,61 @@
+### If no method is given, GET is used
+https://httpbin.org/get
+
+### Note that three brackets acts as a separator for requests, 
+# I use the three brackets as a "title" field for the next request
+# comments still work the same (and will not split a request into a new request)
+
+### Exactly same request, but explicitly stating HTTP/1.1 (best practice)
+https://httpbin.org/get HTTP/1.1
+
+### Example of another HTTP Method, in this case POST. 
+# body is not needed in this tool, although POST usually mandates it.
+POST https://httpbin.org/post HTTP/1.1
+
+
+### Example of a POST request, including a body and content-type header 
+# Notice that body and header division needs an empty line between them
+POST https://httpbin.org/post HTTP/1.1
+content-type: application/json
+
+{
+    "rick": "never gonna give you up",
+    "roll": "never gonna let you down"
+}
+
+### Example with several request headers
+https://httpbin.org/get HTTP/1.1
+User-Agent: rest-client
+Accept-Language: en-GB,en-US;q=0.8,en;q=0.6,zh-CN;q=0.4
+Content-Type: application/json
+
+### Example with XML body, because it shows
+POST https://httpbin.org/post HTTP/1.1
+Content-Type: application/xml
+
+<chorus>
+    <rick>Never gonna run around and desert you</rick>
+    <roll>Never gonna make you cry</roll>
+</chorus>
+
+### Example with basic auth
+GET https://httpbin.org/basic-auth/user/passwd HTTP/1.1
+Authorization: Basic user:passwd
+
+
+# Declaration of a variable, to be used in the next request
+@mypassword = passwd
+
+### Example with variables. Using a variable declared in this file
+GET https://httpbin.org/basic-auth/user/passwd HTTP/1.1
+Authorization: Basic user:{{mypassword}}
+
+### Example with environment variables. 
+# Using a variable declared in .vscode/settings.json
+# Pick the environment in the right bottom corner in VSCode
+# Important: 
+# .vscode/settings.json should be added to .gitignore
+# if you store sensitive credentials there.
+GET https://httpbin.org/basic-auth/user/passwd HTTP/1.1
+Authorization: Basic user:{{{{envPassword}}}}
+

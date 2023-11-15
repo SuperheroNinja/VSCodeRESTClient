@@ -1,0 +1,22 @@
+{
+      "rest-client.environmentVariables": {
+        "$shared": {
+            // $shared means that the variables are always available
+            "version": "v1",
+            "envFunctionalValue": "foo",
+            "envToken": "bar"
+        },
+        "on-prem": {
+            // Consider this an actual environment. 
+            // So it makes sense the keys repeat per environment
+            "envPassword": "passwd",
+            "host": "myhost"
+        },
+        "cloud": {
+            // Consider this an actual environment. 
+            // So it makes sense the keys repeat per environment
+            "envPassword": "passwd",
+            "host": "cloudhost"
+        }
+    }
+}
