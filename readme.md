@@ -15,7 +15,7 @@ This repo contains the following files:
 Start reading this page [VS Code REST Client (Github.com)](https://github.com/Huachao/vscode-restclient#environment-variables)
 
 If you are ~~fed up with~~, finished reading then follow these instructions:
-1. Install extension in VSCode
+1. Install extension in VSCode "REST Client" by publisher:"Huachao Mao"
 2. Check out this repo
 3. Open httpbin.http and send REST requests to httpbin.com
 
